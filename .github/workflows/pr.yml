@@ -5,11 +5,11 @@ env:
 on:
   push:
     branches:
-      - master
+      - main
       - develop
   pull_request:
     branches:
-      - master
+      - main
       - develop
     types:
       - opened
@@ -17,8 +17,6 @@ on:
       - closed
       - labeled
       - unlabeled
-    tags:
-      - "!*"
 jobs:
   release:
     name: Setup

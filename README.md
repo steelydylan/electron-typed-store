@@ -13,15 +13,15 @@ Electron Typed Store is a simple key-value storage solution for Electron applica
 
 To install Electron Typed Store, use npm:
 
-\`\`\`bash
-npm install electron-typed-store
-\`\`\`
+```bash
+$ npm install electron-typed-store
+```
 
 ## Usage
 
 Here's a basic example of how to use Electron Typed Store in your Electron application:
 
-\`\`\`typescript
+```typescript
 import { Store } from 'electron-typed-store';
 
 interface MyData {
@@ -48,7 +48,7 @@ async function main() {
 }
 
 main();
-\`\`\`
+```
 
 ## API
 
@@ -59,23 +59,23 @@ Creates a new store instance.
 - `fileName`: The name of the JSON file to store data.
 - `defaultValues`: An object containing default key-value pairs.
 
-### `set(key: keyof T, value: T[keyof T]): Promise<void>`
+### `store.set`
 
 Sets a value for a specified key.
 
-### `get(key: keyof T): Promise<T[keyof T]>`
+### `store.get`
 
 Retrieves the value for a specified key.
 
-### `delete(key: string): Promise<void>`
+### `store.delete`
 
 Deletes a specified key from the store.
 
-### `getAll(): Promise<T>`
+### `store.getAll`
 
 Returns all stored data.
 
-### `clear(): Promise<void>`
+### `store.clear`
 
 Clears all data from the store.
 

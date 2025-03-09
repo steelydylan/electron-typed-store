@@ -1,0 +1,22 @@
+{
+  "name": "electron-typed-store",
+  "main": "./dist/index.js",
+  "type": "commonjs",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "default": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steelydylan/electron-typed-store.git"
+  },
+  "homepage": "https://github.com/steelydylan/electron-typed-store",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "typescript": "^5.1.6"
+  }
+}

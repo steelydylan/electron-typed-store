@@ -4,10 +4,10 @@ import { app } from 'electron'
 import { pathExists, readJson, writeJson } from './lib'
 
 interface ObjectType {
-  [key: string]: string | number | boolean | ObjectType;
+  [key: string]: string | number | boolean | ObjectType | Array<string | number | boolean | ObjectType>
 }
 
-export class Store<T extends Record<string, ObjectType>> {
+export class Store<T extends ObjectType> {
   private filePath: string
   private data: T
   private ready: Promise<void>
@@ -43,7 +43,7 @@ export class Store<T extends Record<string, ObjectType>> {
     await this.save()
   }
 
-  public async get(key: keyof T): Promise<T[keyof T]> {
+  public async get<K extends keyof T>(key: K): Promise<T[K]> {
     await this.ready
     return this.data[key]
   }

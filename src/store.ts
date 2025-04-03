@@ -3,7 +3,11 @@ import { app } from 'electron'
 
 import { pathExists, readJson, writeJson } from './lib'
 
-export class Store<T extends Record<string, string | number>> {
+interface ObjectType {
+  [key: string]: string | number | boolean | ObjectType;
+}
+
+export class Store<T extends Record<string, ObjectType>> {
   private filePath: string
   private data: T
   private ready: Promise<void>

@@ -11,6 +11,8 @@ Electron Typed Store is a simple key-value storage solution for Electron applica
 
 ## Installation
 
+
+
 To install Electron Typed Store, use npm:
 
 ```bash

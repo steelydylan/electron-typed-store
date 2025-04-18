@@ -17,6 +17,7 @@ To install Electron Typed Store, use npm:
 $ npm install electron-typed-store
 ```
 
+
 ## Usage
 
 Here's a basic example of how to use Electron Typed Store in your Electron application:
